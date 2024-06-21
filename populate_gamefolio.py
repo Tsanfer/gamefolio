@@ -17,8 +17,12 @@ SEED = 42
 
 ### Game Parameters ###
 #Secret API Key stuff, only reason its here is cos the repo is private
-CLIENT_ID = "2w3wcvvgqis5plpiqbhxh7cud3szm0"
-BEARER = "5obg1bjuw5aniisksxd401n5sbca2f"
+# CLIENT_ID = "2w3wcvvgqis5plpiqbhxh7cud3szm0"
+# BEARER = "5obg1bjuw5aniisksxd401n5sbca2f"
+# 设置 Twitch API Client ID
+CLIENT_ID = os.getenv("CLIENT_ID")
+# 设置 Twitch API Token
+BEARER = os.getenv("BEARER")
 BASE_REQUEST = {'headers': {'Client-ID': CLIENT_ID, 'Authorization': f'Bearer {BEARER}'}, "data" : ""}
 NUMBER_OF_GAMES = 500 #Total number of games to load into database
 RESULTS_PER_QUERY = 500  #Max results per query is 500
