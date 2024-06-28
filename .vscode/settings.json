@@ -1,0 +1,17 @@
+{
+  "sqltools.connections": [
+    {
+      "mysqlOptions": {
+        "authProtocol": "default",
+        "enableSsl": "Disabled"
+      },
+      "previewLimit": 50,
+      "server": "120.25.125.60",
+      "port": 3306,
+      "driver": "MySQL",
+      "name": "game_review",
+      "username": "root",
+      "database": "game_review"
+    }
+  ]
+}

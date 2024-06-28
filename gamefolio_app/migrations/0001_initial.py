@@ -28,7 +28,7 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Game',
             fields=[
-                ('id', models.SlugField(primary_key=True, serialize=False, unique=True)),
+                ('id', models.SlugField(max_length = 128, primary_key=True, serialize=False, unique=True,)),
                 ('title', models.CharField(db_index=True, max_length=128)),
                 ('genre', models.CharField(max_length=128)),
                 ('pictureId', models.CharField(max_length=32)),

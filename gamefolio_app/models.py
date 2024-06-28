@@ -14,7 +14,7 @@ class Author(models.Model):
         return f"{self.user.username}"
 
 class Game(models.Model):
-    id = models.SlugField(unique = True, primary_key = True)
+    id = models.SlugField(max_length = 128, unique = True, primary_key = True)
 
     title = models.CharField(max_length = 128, blank = False, db_index = True)
     genre = models.CharField(max_length = 128)                                   
