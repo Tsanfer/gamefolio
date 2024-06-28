@@ -11,7 +11,7 @@
 	// Use 'postCreateCommand' to run commands after the container is created.
 	// "postCreateCommand": "uname -a && sudo apk add lighttpd openrc && sudo sed -i 's/^dir=.*/dir=\/workspaces\/jsxm/g' /etc/mini_httpd/mini_httpd.conf"
 	// "postCreateCommand": "sudo apk add npm && sudo npm install --global http-server",
-	"postCreateCommand": "sudo apk add python3 py3-pip && sudo pip3 install -r requirements.txt"
+	"postCreateCommand": "apk add python3 py3-pip && pip3 install --break-system-packages -r requirements.txt"
 	// "postStartCommand": "http-server"
 	// Configure tool-specific properties.
 	// "customizations": {},

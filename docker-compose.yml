@@ -1,0 +1,16 @@
+# gamefolio
+
+services:
+  gamefolio-game-review:
+    image: tsanfer/gamefolio
+    container_name: gamefolio
+    ports:
+      - 8000:8000
+    environment:
+      - CLIENT_ID='your_twitch_client_id'
+      - BEARER='your_token'
+      - MYSQL_HOST='your_database_host'
+      - MYSQL_DATABASE='your_database_name'
+      - MYSQL_USER='your_database_username'
+      - MYSQL_PASSWORD='your_database_password'
+    restart: always
