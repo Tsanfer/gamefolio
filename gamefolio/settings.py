@@ -74,6 +74,7 @@ TEMPLATES = [
         'DIRS': [TEMPLATE_DIR,],
         'APP_DIRS': True,
         'OPTIONS': {
+            # "init_command": "SET sql_mode='STRICT_TRANS_TABLES'",
             'context_processors': [
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
@@ -84,6 +85,10 @@ TEMPLATES = [
         },
     },
 ]
+
+# python3 manage.py makemigrations
+# python3 manage.py migrate
+# python3 populate_gamefolio.py
 
 WSGI_APPLICATION = 'gamefolio.wsgi.application'
 
@@ -146,3 +151,6 @@ STATIC_URL = '/static/'
 
 MEDIA_ROOT = MEDIA_DIR
 MEDIA_URL = "/media/"
+
+# DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
