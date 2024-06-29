@@ -164,5 +164,5 @@ cython_debug/
 
 ##########
 
-.vscode
-.devcontainer
+.vscode/settings.json
+temp/
