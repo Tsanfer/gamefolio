@@ -14,7 +14,7 @@ class Author(models.Model):
         return f"{self.user.username}"
 
 class Game(models.Model):
-    id = models.SlugField(max_length = 256, unique = True, primary_key = True)
+    id = models.SlugField(max_length = 255, unique = True, primary_key = True)
 
     title = models.CharField(max_length = 128, blank = False, db_index = True)
     genre = models.CharField(max_length = 128)                                   
@@ -70,7 +70,7 @@ class Review(models.Model):
     content = models.TextField(blank = False)
     views = models.IntegerField(default = 0)
     rating = models.PositiveSmallIntegerField(choices=RATING_CHOICES)  #Only allows 1-10 ratings or 1/2-5 stars
-    datePosted = models.DateTimeField(default=timezone.now())
+    datePosted = models.DateTimeField(default=timezone.now)
     likes = models.IntegerField(default=0)
 
     def save(self, *args, **kwargs):
