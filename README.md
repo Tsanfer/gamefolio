@@ -1,8 +1,6 @@
-# GameFolio
+# 游戏评论网站
 
 > 参考仓库链接：https://github.com/dhdylanhuang/gamefolio
-
-
 
 在源仓库 GameFolio 基础上添加：
 - CI/CD自动化构建部署
